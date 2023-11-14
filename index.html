@@ -20,33 +20,39 @@
         <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
       </header>
 
-      <form action="/my-handling-form-page" method="post">
+      <div class="form__container">
         <h2>Let's Do This!</h2>
+        <form action="/my-handling-form-page" method="post">
+          <ul>
+            <label for="first_name">first name</label>
+            <input type="text" id="first_name" name="first_name">
+          </ul>
 
-        <ul class="form__row">
-          <label for="first_name">first name</label><br>
-          <input type="text" id="first_name" name="first_name">
+          <ul>
+            <label for="last_name">last name</label>
+            <input type="text" id="last_name" name="last_name">
+          </ul>
 
-          <label for="last_name">last name</label><br>
-          <input type="text" id="last_name" name="last_name">
-        </ul>
+          <ul>
+            <label for="email">email</label>
+            <input type="email" id="email" name="email">
+          </ul>
 
-        <ul class="form__row">
-          <label for="email">email</label><br>
-          <input type="email" id="email" name="email">
+          <ul>
+            <label for="phone_number">phone number</label>
+            <input type="tel" id="phone_number" name="phone_number">
+          </ul>
+          <ul>
+            <label for="password">password</label>
+            <input type="password" id="password" name="password">
+          </ul>
 
-          <label for="phone_number">phone number</label><br>
-          <input type="tel" id="phone_number" name="phone_number">
-        </ul>
-
-        <ul class="form__row">
-          <label for="password">password</label>
-          <input type="password" id="password" name="password">
-
-          <label for="confirm_password">confirm password</label>
-          <input type="password" id="confirm_password" name="confirm_password">
-        </ul>
-      </form>
+          <ul>
+            <label for="confirm_password">confirm password</label>
+            <input type="password" id="confirm_password" name="confirm_password">
+          </ul>
+        </form>
+      </div>
 
       <footer>
         <button type="submit">Submit</button>

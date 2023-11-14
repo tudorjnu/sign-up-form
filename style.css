@@ -12,6 +12,9 @@
 --background: var(--seasalt);
 --secondary: var(--outer-space);
 
+--white: var(--antiflash-white);
+--black: var(--eerie-black);
+
 }
 
 @font-face {
@@ -82,21 +85,36 @@ header, footer {
   flex: 1 1 auto;
 }
 
+
 form {
-  background-color: var(--antiflash-white);
-}
-
-form.label, form.input {
-  display: block;
-}
-
-form.label {
-  margin-top: 16px;
-}
-
-form ul.form__row {
   display: flex;
-  flex: 1 1 auto;
+  justify-content: space-evenly;
+  gap: 16px;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 300px
+}
 
+.form__container {
+  background-color: var(--antiflash-white);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
+}
+
+form ul {
+  padding: 0; /* Removes default padding */
+}
+
+form label, form input {
+  display: block; /* Ensures label and input are on separate lines */
+  margin-top: 8px;
+}
+
+form ul label {
+  text-transform: uppercase;
+  font-size: 12px;
+  color: var(--onyx);
 }
