@@ -24,32 +24,39 @@
         <h2>Let's Do This!</h2>
         <form action="/my-handling-form-page" method="post">
           <ul>
-            <label for="first_name">first name</label>
-            <input type="text" id="first_name" name="first_name" placeholder="John">
+            <label for="first_name">first name*</label>
+            <input type="text" id="first_name" name="first_name" placeholder="John" size="30" pattern="^[^0-9]+$"
+              maxlength="245" required>
           </ul>
 
           <ul>
-            <label for="last_name">last name</label>
-            <input type="text" id="last_name" name="last_name" placeholder="Smith">
+            <label for="last_name">last name*</label>
+            <input type="text" id="last_name" name="last_name" placeholder="Smith" size="30" pattern="^[^0-9]+$"
+              maxlength="245" required>
           </ul>
 
           <ul>
-            <label for="email">email</label>
-            <input type="email" id="email" name="email" placeholder="john.smith@gmail.com">
+            <label for="email">email*</label>
+            <input type="email" id="email" name="email" placeholder="john.smith@gmail.com" size="30" required>
           </ul>
 
           <ul>
-            <label for="phone_number">phone number</label>
-            <input type="tel" id="phone_number" name="phone_number" placeholder="+447000000000">
+            <label for="phone_number" data-help="Phone number in the format +<country code><phone_number>">phone
+              number*</label>
+            <input type="tel" id="phone_number" name="phone_number" placeholder="+447000000000"
+              pattern="\+\d{1,4}\d{1,15}" minlength="9" maxlength="20" size="30" required>
           </ul>
           <ul>
-            <label for="password">password</label>
-            <input type="password" id="password" name="password">
+            <label for="password"
+              data-help="Include 1 number, 1 uppercase & lowercase letter, 1 symbol; 8-30 characters.">password*</label>
+            <input type="password" id="password" name="password"
+              pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])" minlength="8" maxlength="30" size="30"
+              required>
           </ul>
 
           <ul>
-            <label for="confirm_password">confirm password</label>
-            <input type="password" id="confirm_password" name="confirm_password">
+            <label for="confirm_password">confirm password*</label>
+            <input type="password" id="confirm_password" name="confirm_password" size="30" required>
           </ul>
         </form>
       </div>
