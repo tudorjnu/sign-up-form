@@ -9,6 +9,9 @@
 --onyx: #343a40ff;
 --eerie-black: #212529ff;
 
+--green: #306B34;
+--red: #B0413E;
+
 --background: var(--seasalt);
 --secondary: var(--outer-space);
 
@@ -89,10 +92,11 @@ header, footer {
 form {
   display: flex;
   justify-content: space-evenly;
+  align-content: center;
   gap: 16px;
   flex-wrap: wrap;
   width: 500px;
-  height: 180px
+  height: 220px
 }
 
 .form__container {
@@ -101,6 +105,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-content: center;
   align-items: flex-start;
 }
 
@@ -113,12 +118,30 @@ form label, form input {
   display: block; /* Ensures label and input are on separate lines */
 }
 
+form input {
+  padding: 12px 10px 12px;
+  border: 1px solid var(--slate-gray);
+  border-radius: 4px;
+
+}
+
 form ul label {
   text-transform: uppercase;
   font-size: 12px;
   color: var(--onyx);
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, textarea:focus {
-    background-color: #fff;
+input::placeholder {
+  color: var(--french-gray-2);
+}
+
+input:focus {
+}
+
+input:valid {
+  color: var(--green);
+}
+
+input:invalid, textarea:invalid{
+  color: var(--red);
 }
