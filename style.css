@@ -29,7 +29,9 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
+  color: var(--eerie-black);
 }
+
 
 body {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -84,8 +86,27 @@ main.content > * {
   padding: 16px;
 }
 
-header, footer {
+header {
+  display: flex;
   flex: 1 1 auto;
+  justify-content: center;
+  align-content: flex-start;
+  align-items: center;
+  text-align: left;
+
+  font-size: 30px;
+  font-style: bold;
+  font-family: integralcf-bold;
+  display: flex;
+  justify-content: flex-start;
+}
+
+footer {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
 }
 
 
@@ -96,17 +117,18 @@ form {
   gap: 16px;
   flex-wrap: wrap;
   width: 500px;
-  height: 220px
+  height: 240px
 }
 
 .form__container {
-  background-color: var(--antiflash-white);
+  background-color: var(--seasalt);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-content: center;
   align-items: flex-start;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 form ul {
@@ -118,7 +140,10 @@ form label, form input {
   display: block; /* Ensures label and input are on separate lines */
 }
 
-form input {
+form input[type=text],
+form input[type=email],
+form input[type=tel],
+form input[type=password] {
   padding: 12px 10px 12px;
   border: 1px solid var(--slate-gray);
   border-radius: 4px;
@@ -135,13 +160,29 @@ input::placeholder {
   color: var(--french-gray-2);
 }
 
-input:focus {
+
+
+button[type=submit] {
+  padding: 12px 24px;
+  background-color: var(--slate-gray);
+  color: var(--seasalt);
+  font-weight: 900;
+  font-size: 16px;
+  border: 2px solid var(--slate-gray);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 5%;
 }
 
-input:valid {
-  color: var(--green);
+input[type=submit]:hover {
+  background-color: var(--slate-gray);
 }
 
-input:invalid, textarea:invalid{
-  color: var(--red);
+
+form input:valid {
+  border: 2px solid var(--green);
 }
+
+form input:invalid {
+  border: 2px solid var(--red);
+}
+

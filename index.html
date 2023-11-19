@@ -17,12 +17,14 @@
 
     <main class="content">
       <header>
-        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+        <p>
+          Sign Up to This Awesome Service Today!
+        </p>
       </header>
 
       <div class="form__container">
         <h2>Let's Do This!</h2>
-        <form action="/my-handling-form-page" method="post">
+        <form id="register" action="/my-handling-form-page" method="post">
           <ul>
             <label for="first_name">first name*</label>
             <input type="text" id="first_name" name="first_name" placeholder="John" size="30" pattern="^[^0-9]+$"
@@ -59,11 +61,10 @@
             <input type="password" id="confirm_password" name="confirm_password" size="30" required>
           </ul>
         </form>
+        <button type="submit" form="register">Create Account</button>
       </div>
-
       <footer>
-        <button type="submit">Submit</button>
-        <p>Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.</p>
+        <p>Sign-Up Today!</p>
       </footer>
     </main>
   </div>
